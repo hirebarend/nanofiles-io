@@ -3,6 +3,22 @@ import { FileMonkey } from "file-monkey";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
 
+const supportedFileExtensions = [
+  "docx",
+  "odt",
+  "rtf",
+  "pdf",
+  "txt",
+  "xlsx",
+  "ods",
+  "csv",
+  "tsv",
+  "jpg",
+  "png",
+  "jpeg",
+  "svg",
+].sort();
+
 export const FileMonkeyComponent = (props: {
   // eslint-disable-next-line no-unused-vars
   onResult: (collection: any) => void;
@@ -34,31 +50,14 @@ export const FileMonkeyComponent = (props: {
 
       <div className="tw-mb-3 tw-text-center tw-text-xs">
         Don't upload assets which has sensitive information. Supported file
-        extensions are <span className="tw-text-primary">.pdf</span>{" "}
-        <span className="tw-text-primary">.docx</span>{" "}
-        <span className="tw-text-primary">.doc</span>{" "}
-        <span className="tw-text-primary">.rtf</span>{" "}
-        <span className="tw-text-primary">.ppt</span>{" "}
-        <span className="tw-text-primary">.pptx</span>{" "}
-        <span className="tw-text-primary">.txt</span>{" "}
-        <span className="tw-text-primary">.xlsx</span>{" "}
-        <span className="tw-text-primary">.png</span>{" "}
-        <span className="tw-text-primary">.jpg</span>{" "}
-        <span className="tw-text-primary">.jpeg</span>{" "}
-        <span className="tw-text-primary">.psd</span>{" "}
-        <span className="tw-text-primary">.ai</span>{" "}
-        <span className="tw-text-primary">.svg</span>{" "}
-        <span className="tw-text-primary">.bmp</span>.
+        extensions are{" "}
+        {supportedFileExtensions.map((x) => (
+          <span className="tw-mx-0.5 tw-text-primary" key={x}>
+            .{x}
+          </span>
+        ))}
+        .
       </div>
-
-      {/* <button
-        className=""
-        disabled={state.isLoading}
-        onClick={() => inputElementFile.current.click()}
-      >
-        <FontAwesomeIcon icon={faTrash} />
-        &nbsp;Upload File
-      </button> */}
 
       <input
         multiple
@@ -68,9 +67,10 @@ export const FileMonkeyComponent = (props: {
             isLoading: true,
           });
 
-          const collection = await FileMonkey(props.username, props.tags).onChange(
-            event
-          );
+          const collection = await FileMonkey(
+            props.username,
+            props.tags
+          ).onChange(event);
 
           setState({
             data: collection,
