@@ -7,6 +7,7 @@ function App() {
     <Routes>
       <Route element={<HomePage />} path="/" />
       <Route element={<SpacesPage />} path="/spaces" />
+      <Route element={<SpacesPage />} path="/spaces/:id" />
     </Routes>
   );
 }

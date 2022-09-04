@@ -6,6 +6,7 @@ import { faUpload } from "@fortawesome/free-solid-svg-icons";
 export const FileMonkeyComponent = (props: {
   // eslint-disable-next-line no-unused-vars
   onResult: (collection: any) => void;
+  tags: Array<string>;
   username: string;
 }) => {
   const inputElementFile = useRef(null as any | null);
@@ -18,7 +19,10 @@ export const FileMonkeyComponent = (props: {
   console.log(state);
 
   return (
-    <div className="tw-bg-gray-50 tw-flex tw-flex-col tw-items-center tw-px-12 tw-py-12 tw-rounded-lg">
+    <div
+      className="tw-bg-gray-50 tw-flex tw-flex-col tw-items-center tw-px-12 tw-py-12 tw-rounded-lg"
+      onClick={() => inputElementFile.current.click()}
+    >
       <FontAwesomeIcon
         className="tw-mb-3 tw-text-3xl tw-text-primary"
         icon={faUpload}
@@ -64,7 +68,9 @@ export const FileMonkeyComponent = (props: {
             isLoading: true,
           });
 
-          const collection = await FileMonkey(props.username).onChange(event);
+          const collection = await FileMonkey(props.username, props.tags).onChange(
+            event
+          );
 
           setState({
             data: collection,
