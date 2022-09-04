@@ -45,11 +45,11 @@ export const FileMonkeyComponent = (props: {
       />
 
       <div className="tw-font-medium tw-mb-3 tw-text-center tw-text-sm">
-        Click or drag file to this area (Max 10 Mb)
+        Click or drag files to this area (Max 10 MB)
       </div>
 
       <div className="tw-mb-3 tw-text-center tw-text-xs">
-        Don't upload assets which has sensitive information. Supported file
+        Don't upload files that contains sensitive information. Supported file
         extensions are{" "}
         {supportedFileExtensions.map((x) => (
           <span className="tw-mx-0.5 tw-text-primary" key={x}>
