@@ -57,7 +57,7 @@ export function HomePage() {
           </form>
 
           <button
-            className="tw-border tw-border-primary tw-font-medium tw-mt-6 tw-px-4 tw-py-2 tw-rounded-lg tw-text-primary tw-w-full"
+            className="tw-border tw-border-primary tw-font-medium tw-mt-6 tw-px-4 tw-py-2 tw-rounded-lg tw-text-primary tw-w-full hover:tw-bg-primary hover:tw-text-white"
             onClick={() => {
               const id: number = Math.round(
                 Math.random() * (1000000 - 100000) + 100000
