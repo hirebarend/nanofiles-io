@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faUpload } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
+import { NavbarComponent } from "../components";
 
 export function HomePage() {
   const navigate = useNavigate();
@@ -20,11 +21,7 @@ export function HomePage() {
 
   return (
     <>
-      <div className="tw-bg-white tw-px-6 tw-py-4 lg:tw-px-24 md:tw-px-12">
-        <a href="/">
-          <img alt="Logo" src="/images/logo.png" style={{ height: "32px" }} />
-        </a>
-      </div>
+      <NavbarComponent />
       <div className="tw-px-6 tw-py-24">
         <div className="tw-max-w-xl tw-mx-auto">
           <form onSubmit={formik.handleSubmit}>

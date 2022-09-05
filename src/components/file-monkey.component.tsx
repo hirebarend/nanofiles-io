@@ -17,6 +17,8 @@ const supportedFileExtensions = [
   "png",
   "jpeg",
   "svg",
+  "pptx",
+  "odp",
 ];
 
 export const FileMonkeyComponent = (props: {
@@ -45,7 +47,7 @@ export const FileMonkeyComponent = (props: {
       />
 
       <div className="tw-font-medium tw-mb-3 tw-text-center tw-text-sm">
-        Click or drag files to this area (Max 10 MB)
+        Click or drag files to this area (Up to 10 MB)
       </div>
 
       <div className="tw-mb-3 tw-text-center tw-text-xs">
