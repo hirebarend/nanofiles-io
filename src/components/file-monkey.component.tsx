@@ -51,7 +51,7 @@ export const FileMonkeyComponent = (props: {
       <div className="tw-mb-3 tw-text-center tw-text-xs">
         Don't upload files that contain sensitive information. Supported file
         extensions are{" "}
-        <span className="tw-mx-0.5 tw-text-primary">
+        <span className="tw-text-primary">
           {supportedFileExtensions
             .sort()
             .map((x) => `.${x}`)
