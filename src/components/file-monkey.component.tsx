@@ -17,7 +17,7 @@ const supportedFileExtensions = [
   "png",
   "jpeg",
   "svg",
-].sort();
+];
 
 export const FileMonkeyComponent = (props: {
   // eslint-disable-next-line no-unused-vars

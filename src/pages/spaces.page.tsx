@@ -16,7 +16,9 @@ export function SpacesPage() {
   return (
     <>
       <div className="tw-bg-white tw-px-6 tw-py-4 lg:tw-px-24 md:tw-px-12">
-        <img alt="Logo" src="/images/logo.png" style={{ height: "32px" }} />
+        <a href="/">
+          <img alt="Logo" src="/images/logo.png" style={{ height: "32px" }} />
+        </a>
       </div>
       <div className="tw-px-6 tw-py-24">
         <div className="tw-max-w-xl tw-mx-auto">
@@ -39,7 +41,7 @@ export function SpacesPage() {
 
           {useQueryResultFiles.data?.items.map((x, index) => (
             <div
-              className="tw-bg-gray-50 tw-flex tw-gap-4 tw-justify-between tw-my-3 tw-p-2 tw-rounded-lg"
+              className="tw-bg-gray-50 tw-flex tw-gap-2 tw-justify-between tw-my-3 tw-p-2 tw-rounded-lg"
               key={index}
             >
               <div className="tw-px-2 tw-py-2 tw-text-sm">{x.name}</div>

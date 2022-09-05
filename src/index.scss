@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-// .background-image-map {
-//   background-image: url("../public/images/background-image.png");
-//   height: 100%;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
+input.numeric::-webkit-outer-spin-button,
+input.numeric::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -21,25 +21,27 @@ export function HomePage() {
   return (
     <>
       <div className="tw-bg-white tw-px-6 tw-py-4 lg:tw-px-24 md:tw-px-12">
-        <img alt="Logo" src="/images/logo.png" style={{ height: "32px" }} />
+        <a href="/">
+          <img alt="Logo" src="/images/logo.png" style={{ height: "32px" }} />
+        </a>
       </div>
       <div className="tw-px-6 tw-py-24">
         <div className="tw-max-w-xl tw-mx-auto">
           <form onSubmit={formik.handleSubmit}>
-            <div className="tw-gap-4 tw-grid tw-grid-cols-7">
+            <div className="tw-gap-2 tw-grid tw-grid-cols-6">
               <div className="tw-col-span-4">
                 <input
-                  className="tw-border tw-border-gray-300 tw-outline-none tw-p-2 tw-rounded-lg tw-text-gray-900 tw-w-full"
+                  className="numeric tw-border tw-border-gray-300 tw-outline-none tw-p-2 tw-rounded-lg tw-text-gray-900 tw-w-full"
                   name="id"
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
                   placeholder="Enter your space ID"
                   value={formik.values.id}
-                  type="text"
+                  type="number"
                 />
               </div>
 
-              <div className="tw-col-span-3">
+              <div className="tw-col-span-2">
                 <button
                   className="tw-bg-primary tw-font-medium tw-px-4 tw-py-2 tw-rounded-lg tw-text-white tw-w-full"
                   type="submit"
@@ -48,7 +50,7 @@ export function HomePage() {
                     className="text-gray-500"
                     icon={faDownload}
                   />
-                  &nbsp;Download files
+                  &nbsp; Files
                 </button>
               </div>
             </div>
@@ -65,7 +67,7 @@ export function HomePage() {
             }}
           >
             <FontAwesomeIcon className="text-gray-500" icon={faUpload} />
-            &nbsp;Upload files
+            &nbsp;Upload your files
           </button>
         </div>
       </div>
