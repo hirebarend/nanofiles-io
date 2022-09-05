@@ -26,7 +26,7 @@ export function HomePage() {
       <div className="tw-px-6 tw-py-24">
         <div className="tw-max-w-xl tw-mx-auto">
           <form onSubmit={formik.handleSubmit}>
-            <div className="tw-gap-4 tw-grid tw-grid-cols-6">
+            <div className="tw-gap-4 tw-grid tw-grid-cols-7">
               <div className="tw-col-span-4">
                 <input
                   className="tw-border tw-border-gray-300 tw-outline-none tw-p-2 tw-rounded-lg tw-text-gray-900 tw-w-full"
@@ -39,7 +39,7 @@ export function HomePage() {
                 />
               </div>
 
-              <div className="tw-col-span-2">
+              <div className="tw-col-span-3">
                 <button
                   className="tw-bg-primary tw-font-medium tw-px-4 tw-py-2 tw-rounded-lg tw-text-white tw-w-full"
                   type="submit"
