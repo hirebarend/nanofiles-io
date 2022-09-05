@@ -60,11 +60,11 @@ export function SpacesPage() {
             >
               <div className="tw-px-2 tw-py-2 tw-text-sm">{x.name}</div>
               <div className="tw-text-sm">
-                <button className="tw-mr-1 tw-p-2 tw-text-gray-500">
+                <button className="tw-mr-1 tw-px-1 tw-py-2 tw-text-gray-500">
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
                 <button
-                  className="tw-ml-1 tw-p-2 tw-text-primary"
+                  className="tw-ml-1 tw-px-1 tw-py-2 tw-text-primary"
                   onClick={() => window.open(x.url, "_blank")}
                 >
                   <FontAwesomeIcon icon={faDownload} />
