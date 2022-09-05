@@ -66,6 +66,26 @@ export function HomePage() {
             <FontAwesomeIcon className="text-gray-500" icon={faUpload} />
             &nbsp;Upload your files
           </button>
+
+          <div className="tw-absolute tw-bottom-0 tw-left-0 tw-w-full">
+            <div className="tw-bg-gray-50 tw-flex tw-gap-2 tw-justify-center tw-items-center tw-py-3 tw-text-sm">
+              <img
+                alt="Icon"
+                src="/images/icon.png"
+                style={{ height: "24px" }}
+              />
+              <div>
+                {new Intl.NumberFormat("en-US", {
+                  maximumFractionDigits: 0,
+                }).format(
+                  ((new Date().getTime() - new Date(2022, 8, 4).getTime()) /
+                    86400000) *
+                    3650
+                )}{" "}
+                files uploaded
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

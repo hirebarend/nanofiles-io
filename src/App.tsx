@@ -7,9 +7,11 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    mixpanel.init("6570fb6b55412e8145762b070dd25c3b");
+    if (process.env.NODE_ENV === "production") {
+      mixpanel.init("6570fb6b55412e8145762b070dd25c3b");
 
-    mixpanel.track("Page View");
+      mixpanel.track("Page View");
+    }
   }, [location]);
 
   return (
