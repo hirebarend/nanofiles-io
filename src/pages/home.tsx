@@ -16,7 +16,7 @@ export function HomePage() {
       navigate(`/spaces/${values.id}`);
     },
     validateOnMount: true,
-    validationSchema: yup.object().shape({ id: yup.string().required() }),
+    validationSchema: yup.object().shape({ id: yup.string().matches(/^\d{6}$/).required() }),
   });
 
   return (

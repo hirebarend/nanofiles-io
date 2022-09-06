@@ -20,7 +20,7 @@ export function SpacesPage() {
   );
 
   useEffect(() => {
-    if (!params.id) {
+    if (!params.id || !params.id.match(/^\d{6}$/)) {
       const id: number = Math.round(
         Math.random() * (1000000 - 100000) + 100000
       );
