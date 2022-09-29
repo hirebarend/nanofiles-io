@@ -14,8 +14,8 @@ export async function findFiles(spaceId: string): Promise<{
     pageSize: number;
   }>("https://api.filemonkey.io/api/v1/files", {
     auth: {
-      password: "13A07622D7FC8962C7D948CF885B2A78",
-      username: "F8BDA464EDC9B041AD311E5806C24475",
+      password: "c944e0ec-dd3c-416d-8e96-a38b2413d7d6",
+      username: "dd60f56f-7fba-4a5d-bc26-702c9f98ac61",
     },
     params: {
       tags: [spaceId],
